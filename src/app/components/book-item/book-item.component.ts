@@ -12,13 +12,13 @@ export class BookItemComponent implements OnInit {
   constructor() { }
 
   @Input() book?:Book
-  @Output() bookSelected: EventEmitter<null> = new EventEmitter()
+  @Output() bookSelected: EventEmitter<number> = new EventEmitter()
 
   ngOnInit(): void {
   }
 
   handleBookSelected(){
-    this.bookSelected.emit()
+    this.bookSelected.emit(this.book?.id)
   }
 
 }

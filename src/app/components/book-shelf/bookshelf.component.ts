@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Book } from "src/app/models/book";
 import { User } from "src/app/models/user";
 import { BookService } from "src/app/services/book.service";
@@ -14,7 +15,7 @@ export default class BookShelfComponent implements OnInit {
 
 
 
-    constructor(private readonly bookService: BookService, private readonly userService: UserService) {
+    constructor(private readonly bookService: BookService, private readonly userService: UserService, private readonly router:Router) {
 
     }
 
@@ -29,8 +30,10 @@ export default class BookShelfComponent implements OnInit {
 
     }
 
-    handleBookSelected() {
-        console.log("your child has needs")
+    handleBookSelected(bookId:number) {
+
+       this.router.navigate(['/notes',bookId])
+
     }
 
     get user() :User{

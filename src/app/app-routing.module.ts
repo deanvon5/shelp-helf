@@ -15,7 +15,7 @@ const routes: Routes = [
         path:"shelf",component:ShelfPage,canActivate:[AuthGuard]
     },
     {
-        path:"notes",component:NotesPage,canActivate:[AuthGuard]
+        path:"notes/:bookIdParam",component:NotesPage,canActivate:[AuthGuard]
     }
 ]
 

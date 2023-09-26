@@ -14,7 +14,8 @@ import { BookItemComponent } from './components/book-item/book-item.component';
 // [x]-Service (books and users)
 // [x]-Lifted state
 // [x]-Guarding
-// [tomorrow]-Pipe and Rxjs
+// []-Url params
+// []-Pipe and Rxjs (switch map)
 
 
 @NgModule({
